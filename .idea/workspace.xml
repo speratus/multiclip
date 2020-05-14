@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="173c4aae-78d1-4810-a491-523af261ef52" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/multiclip/routing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/multiclip.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/multiclip.iml" afterDir="false" />
+    <list default="true" id="173c4aae-78d1-4810-a491-523af261ef52" name="Default Changelist" comment="Sets up channels plugin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/multiclip/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/multiclip/settings.py" afterDir="false" />
     </list>
@@ -62,6 +60,14 @@
       <option name="presentableId" value="Default" />
       <updated>1589462480617</updated>
     </task>
+    <task id="LOCAL-00001" summary="Sets up channels plugin">
+      <created>1589465007653</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589465007653</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -75,7 +81,15 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Sets up channels plugin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sets up channels plugin" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1589465011767">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1589465011767" />
     <state x="659" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1589464819744">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
