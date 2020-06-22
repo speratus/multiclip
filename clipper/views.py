@@ -1,12 +1,15 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login as log_user_in
 
 from .forms import LoginForm
 
 
 def main(request):
-    render(request, 'main.html')
+    if request.user.is_authenticated:
+        return render(request, 'main.html')
+    else:
+        return redirect(reverse('login'))
 
 
 def login(request):
@@ -17,8 +20,8 @@ def login(request):
             user = authenticate(username=data['username'], password=data['password'])
 
             if user is not None:
-                login(request, user)
-                redirect(reverse('main'))
+                log_user_in(request, user)
+                return redirect(reverse('main'))
     else:
         loginform = LoginForm()
-        render(request, 'login.html', {'form': loginform})
+        return render(request, 'login.html', {'form': loginform})
