@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.contrib.auth import authenticate, login as log_user_in
+from django.http.response import HttpResponseRedirect
+import uuid
 
 from .forms import LoginForm
 
@@ -21,7 +23,10 @@ def login(request):
 
             if user is not None:
                 log_user_in(request, user)
-                return redirect(reverse('main'))
+                id = uuid.uuid4()
+                response = HttpResponseRedirect(reverse('main'))
+                response.set_cookie('room-id', id.hex)
+                return response
     else:
         loginform = LoginForm()
         return render(request, 'login.html', {'form': loginform})
