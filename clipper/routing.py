@@ -3,5 +3,5 @@ from django.urls import re_path
 from . import consumers
 
 websocket_urlpatterns = [
-    re_path(r'ws/clip/(?P<room-id>\w+)/$', consumers.WebsocketConsumer)
+    re_path(r'ws/clipboard/(?P<room_id>\w+)/$', consumers.WebsocketConsumer)
 ]
