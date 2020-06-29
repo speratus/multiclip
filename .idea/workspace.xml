@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="173c4aae-78d1-4810-a491-523af261ef52" name="Default Changelist" comment="adjusts websocket routing to reflect new changes.">
+    <list default="true" id="173c4aae-78d1-4810-a491-523af261ef52" name="Default Changelist" comment="websockets now require connector to have same clipboard id as user">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clipper/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/clipper/consumers.py" afterDir="false" />
     </list>
@@ -194,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593460771339</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="websockets now require connector to have same clipboard id as user">
+      <created>1593461071381</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1593461071381</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -228,7 +235,8 @@
     <MESSAGE value="adds basic signup form" />
     <MESSAGE value="refactors login and main template to adjust to UserClipboard model" />
     <MESSAGE value="adjusts websocket routing to reflect new changes." />
-    <option name="LAST_COMMIT_MESSAGE" value="adjusts websocket routing to reflect new changes." />
+    <MESSAGE value="websockets now require connector to have same clipboard id as user" />
+    <option name="LAST_COMMIT_MESSAGE" value="websockets now require connector to have same clipboard id as user" />
   </component>
   <component name="WindowStateProjectService">
     <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1589466584833">
