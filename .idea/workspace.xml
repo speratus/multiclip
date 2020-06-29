@@ -21,10 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="173c4aae-78d1-4810-a491-523af261ef52" name="Default Changelist" comment="creates a base ClipConsumer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clipper/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/clipper/consumers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multiclip/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/multiclip/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clipper/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/clipper/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +49,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../experimenation/chatsockets" />
   </component>
   <component name="RecentsManager">
@@ -140,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592927139668</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="adds basic echo functionality to the websocket consumer">
+      <created>1592928421508</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1592928421508</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,17 +171,18 @@
     <MESSAGE value="creates a base ClipConsumer" />
     <MESSAGE value="sets up websocket routings" />
     <MESSAGE value="fixing websocket routing bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing websocket routing bug" />
+    <MESSAGE value="adds basic echo functionality to the websocket consumer" />
+    <option name="LAST_COMMIT_MESSAGE" value="adds basic echo functionality to the websocket consumer" />
   </component>
   <component name="WindowStateProjectService">
     <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1589466584833">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1589466584833" />
-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1592861646687">
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1592928425852">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1592861646687" />
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1592928425852" />
     <state x="689" y="342" width="604" height="430" key="git4idea.merge.GitPullDialog" timestamp="1592849117337">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
