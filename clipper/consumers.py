@@ -6,7 +6,7 @@ from channels.generic.websocket import WebsocketConsumer
 
 class ClipConsumer(WebsocketConsumer):
     def connect(self):
-        self.room_id = self.scope['url_route']['kwargs']['room_id']
+        self.room_id = self.scope['url_route']['kwargs']['clipboard_id']
         self.room_group_name = f'clipboard_{self.room_id}'
         async_to_sync(self.channel_layer.group_add)(
             self.room_group_name,
