@@ -2,10 +2,11 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.contrib.auth import authenticate, login as log_user_in
 from django.http.response import HttpResponseRedirect
+from django.contrib.auth.models import User
 import uuid
 
-from .forms import LoginForm
-
+from .forms import LoginForm, SignupForm
+from .models import UserClipboard
 
 def main(request):
     if request.user.is_authenticated:
@@ -30,3 +31,22 @@ def login(request):
     else:
         loginform = LoginForm()
         return render(request, 'login.html', {'form': loginform})
+
+
+def signup(request):
+    if request.method == 'POST':
+        form = SignupForm(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+
+            if data['confirm_password'] == data['password']:
+                user = User.objects.create_user(data['username'], data['email'], data['password'])
+                clipbpoard_id = uuid.uuid4().hex
+                clipboard = UserClipboard(user=user, clipbpoard_id=clipbpoard_id)
+                clipboard.save()
+                return redirect(reverse('login'))
+            else:
+                pass
+    else:
+        signupform = SignupForm()
+        return render(request, 'signup.html', {'form': signupform})
