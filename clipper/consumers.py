@@ -6,13 +6,16 @@ from channels.generic.websocket import WebsocketConsumer
 
 class ClipConsumer(WebsocketConsumer):
     def connect(self):
-        self.room_id = self.scope['url_route']['kwargs']['clipboard_id']
-        self.room_group_name = f'clipboard_{self.room_id}'
+        self.clipboard_id = self.scope['url_route']['kwargs']['clipboard_id']
+        self.room_group_name = f'clipboard_{self.clipboard_id}'
         async_to_sync(self.channel_layer.group_add)(
             self.room_group_name,
             self.channel_name
         )
-        self.accept()
+        user = self.scope['user']
+        if user.userclipboard.clipboard_id == self.clipboard_id:
+            self.accept()
+
 
     def disconnect(self, code):
         async_to_sync(self.channel_layer.group_discard)(
