@@ -24,9 +24,9 @@ def login(request):
 
             if user is not None:
                 log_user_in(request, user)
-                id = uuid.uuid4()
+                id = user.userclipboard.clipboard_id
                 response = HttpResponseRedirect(reverse('main'))
-                response.set_cookie('room-id', id.hex)
+                response.set_cookie('clipboard-id', id)
                 return response
     else:
         loginform = LoginForm()
