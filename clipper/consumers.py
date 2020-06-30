@@ -3,10 +3,6 @@ import json
 from asgiref.sync import async_to_sync
 from channels.generic.websocket import WebsocketConsumer
 
-import logging
-
-logger = logging.getLogger(__name__)
-
 
 class ClipConsumer(WebsocketConsumer):
     def connect(self):
@@ -17,7 +13,6 @@ class ClipConsumer(WebsocketConsumer):
             self.channel_name
         )
         user = self.scope['user']
-        logger.debug('initiating connect protocol')
         if user.userclipboard.clipboard_id == self.clipboard_id:
             self.accept()
             clipboard = user.userclipboard
@@ -33,7 +28,6 @@ class ClipConsumer(WebsocketConsumer):
         )
 
     def receive(self, text_data=None, bytes_data=None):
-        logger.info('received text.')
         text_data_json = json.loads(text_data)
         clipboard = text_data_json['clipboard']
 
@@ -50,7 +44,6 @@ class ClipConsumer(WebsocketConsumer):
         user = self.scope['user']
         user_clipboard = user.userclipboard
         user_clipboard.current_item = clipboard
-        logger.info('updating clipboard')
         self.send(text_data=json.dumps({
             'clipboard': clipboard
         }))

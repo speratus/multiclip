@@ -22,7 +22,7 @@
     <list default="true" id="173c4aae-78d1-4810-a491-523af261ef52" name="Default Changelist" comment="properly indents clipboard.js">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clipper/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/clipper/consumers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clipper/static/clipper/clipboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/clipper/static/clipper/clipboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clipper/routing.py" beforeDir="false" afterPath="$PROJECT_DIR$/clipper/routing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clipper/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/clipper/templates/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
