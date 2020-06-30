@@ -15,11 +15,6 @@ class ClipConsumer(WebsocketConsumer):
         user = self.scope['user']
         if user.userclipboard.clipboard_id == self.clipboard_id:
             self.accept()
-            clipboard = user.userclipboard
-            if clipboard.current_item != '':
-                self.send(text_data=json.dumps({
-                    'clipboard': clipboard.current_item
-                }))
 
     def disconnect(self, code):
         async_to_sync(self.channel_layer.group_discard)(
@@ -29,6 +24,16 @@ class ClipConsumer(WebsocketConsumer):
 
     def receive(self, text_data=None, bytes_data=None):
         text_data_json = json.loads(text_data)
+
+        if 'update' in text_data_json:
+            user = self.scope['user']
+            user_clipboard = user.userclipboard
+            if user_clipboard.current_item != '':
+                self.send(text_data=json.dumps({
+                    'clipboard': user_clipboard.current_item
+                }))
+            return
+
         clipboard = text_data_json['clipboard']
 
         async_to_sync(self.channel_layer.group_send)(
