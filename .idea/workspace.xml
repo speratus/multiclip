@@ -19,11 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="173c4aae-78d1-4810-a491-523af261ef52" name="Default Changelist" comment="fixes bugs with websocket routing. Prototype works!">
+    <list default="true" id="173c4aae-78d1-4810-a491-523af261ef52" name="Default Changelist" comment="starts refactoring consumers to make clipboard to transfer on  connect">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clipper/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/clipper/consumers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clipper/static/clipper/clipboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/clipper/static/clipper/clipboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clipper/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/clipper/templates/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -320,9 +320,9 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="689" y="342" width="604" height="430" key="git4idea.merge.GitPullDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1592849117337" />
-    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1593525664251">
+    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1593568369996">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1593525664251" />
+    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1593568369996" />
   </component>
 </project>
