@@ -10,6 +10,7 @@ django = "*"
 channels = "*"
 channels-redis = "*"
 redis = "*"
+daphne = "*"
 
 [requires]
 python_version = "3.8"
