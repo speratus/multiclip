@@ -41,8 +41,8 @@ def signup(request):
 
             if data['confirm_password'] == data['password']:
                 user = User.objects.create_user(data['username'], data['email'], data['password'])
-                clipbpoard_id = uuid.uuid4().hex
-                clipboard = UserClipboard(user=user, clipbpoard_id=clipbpoard_id)
+                clipboard_id = uuid.uuid4().hex
+                clipboard = UserClipboard(user=user, clipboard_id=clipboard_id)
                 clipboard.save()
                 return redirect(reverse('login'))
             else:

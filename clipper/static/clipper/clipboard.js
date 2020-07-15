@@ -6,7 +6,7 @@ function getCookieValue(name) {
 const clipboardId = getCookieValue('clipboard-id');
 
 const clipSocket = new WebSocket(
-    'ws://'
+    'wss://'
     + window.location.host
     + '/ws/clipboard/'
     + clipboardId

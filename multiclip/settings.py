@@ -25,7 +25,7 @@ SECRET_KEY = 'j(c6)xj0u(_98wv^0*u+aqc(l8#ykgrqks)b4kwk2&!@js()wg'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -129,4 +129,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'https://themac.local:25443/static/'
+STATIC_ROOT = '/usr/local/var/www/static/'
