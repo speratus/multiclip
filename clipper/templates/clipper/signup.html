@@ -1,16 +1,35 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Signup for a new account.</title>
-    </head>
-    <body>
-        <main>
-            <form action="/clip/signup" method="post">
-                {% csrf_token %}
-                {{ form }}
-                <input type="submit" value="Signup">
-            </form>
-        </main>
-    </body>
-</html>
+{% extends "./layout.html" %}
+{% load static %}
+
+{% block title %}Signup for a new account{% endblock %}
+
+{% block main %}
+<h1>Enter Your Account Details</h1>
+<form action="{% url 'signup' %}" method="post">
+    {% csrf_token %}
+    <div class="full-width left">
+        <label for="{{ form.email.id_for_label }}">Email:</label><br>
+        {{ form.email }}
+    </div><br>
+    <div class="full-width left">
+        <label for="{{ form.username.id_for_label }}">Username:</label><br>
+        {{ form.username }}
+    </div><br>
+    <div class="full-width left">
+        <label for="{{ form.password.id_for_label }}">Password:</label><br>
+        {{ form.password }}
+    </div><br>
+    <div class="full-width left">
+        <label for="{{ form.confirm_password.id_for_label }}">Confirm Password:</label><br>
+        {{ form.confirm_password }}
+    </div><br>
+    <input type="submit" value="Signup" class="button">
+</form>
+{% endblock %}
+
+{% block footernav %}
+    <div>
+        <a class="button full-width" href="{% url 'login' %}">Sign in</a>
+    </div>
+{% endblock %}
