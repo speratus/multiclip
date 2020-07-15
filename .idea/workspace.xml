@@ -19,12 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="173c4aae-78d1-4810-a491-523af261ef52" name="Default Changelist" comment="adds redis dependency and makes auto echo clipboard work">
-      <change afterPath="$PROJECT_DIR$/clipper/templates/clipper/layout.html" afterDir="false" />
+    <list default="true" id="173c4aae-78d1-4810-a491-523af261ef52" name="Default Changelist" comment="adds stylesheet and refactors templates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clipper/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/clipper/templates/clipper/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clipper/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/clipper/templates/clipper/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clipper/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/clipper/templates/clipper/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clipper/templates/clipper/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/clipper/templates/clipper/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clipper/templates/clipper/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/clipper/templates/clipper/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clipper/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/clipper/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593569888426</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="adds stylesheet and refactors templates">
+      <created>1594821617429</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1594821617429</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -283,7 +289,8 @@
     <MESSAGE value="properly indents clipboard.js" />
     <MESSAGE value="fixes bugs with websocket routing. Prototype works!" />
     <MESSAGE value="adds redis dependency and makes auto echo clipboard work" />
-    <option name="LAST_COMMIT_MESSAGE" value="adds redis dependency and makes auto echo clipboard work" />
+    <MESSAGE value="adds stylesheet and refactors templates" />
+    <option name="LAST_COMMIT_MESSAGE" value="adds stylesheet and refactors templates" />
   </component>
   <component name="WindowStateProjectService">
     <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1589466584833">

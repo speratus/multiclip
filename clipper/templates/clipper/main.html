@@ -1,22 +1,35 @@
 <!DOCTYPE html>
+{% extends "./layout.html" %}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Copy and Paste</title>
-    <script defer src="{% static 'clipper/clipboard.js' %}"></script>
-</head>
-<body>
-    <main>
-        <h1>Hello World!</h1>
-        <div id="cloud-container">
-            <p>Cloud clipboard: </p><div id="cloud-clipboard"></div>
-            <button id="receive-button" onclick="receiveClipboard()">Paste from cloud</button>
-        </div>
-        <div id="local-container">
-            <p>Local clipboard: </p><div id="local-clipboard">Nothing available ...</div>
-            <button id="send-button" onclick="sendClipboard()">Copy to Cloud</button>
-        </div>
-    </main>
-</body>
-</html>
+
+{% block title %}Copy and Paste{% endblock %}
+
+{% block scripts %}
+<script defer src="{% static 'clipper/clipboard.js' %}"></script>
+{% endblock %}
+
+{% block main %}
+<div class="baloon-container">
+    <p class="label">Cloud clipboard:</p>
+    <div class="baloon" id="cloud-clipboard">Nothing available...</div>
+    <div class="full-width left baloon-spacer">
+        <button id="receive-button" onclick="receiveClipboard()" class="button">Paste from Cloud</button>
+    </div>
+</div>
+<div class="baloon-container">
+    <p class="label">Local clipboard:</p>
+    <div class="baloon light" id="local-clipboard">Nothing available...</div>
+    <div class="full-width left baloon-spacer">
+        <button id="send-button" onclick="sendClipboard()" class="button">Copy to Cloud</button>
+    </div>
+</div>
+{% endblock %}
+
+{% block footernav %}
+<div>
+    <a class="button full-width">Settings</a>
+</div>
+<div>
+    <a class="button danger full-width dark-font">Logout</a>
+</div>
+{% endblock %}

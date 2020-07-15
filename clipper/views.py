@@ -10,7 +10,7 @@ from .models import UserClipboard
 
 def main(request):
     if request.user.is_authenticated:
-        return render(request, 'main.html')
+        return render(request, 'clipper/main.html')
     else:
         return redirect(reverse('login'))
 
@@ -30,7 +30,7 @@ def login(request):
                 return response
     else:
         loginform = LoginForm()
-        return render(request, 'login.html', {'form': loginform})
+        return render(request, 'clipper/login.html', {'form': loginform})
 
 
 def signup(request):
@@ -49,4 +49,4 @@ def signup(request):
                 pass
     else:
         signupform = SignupForm()
-        return render(request, 'signup.html', {'form': signupform})
+        return render(request, 'clipper/signup.html', {'form': signupform})
