@@ -1,16 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login to your account</title>
-</head>
-<body>
-    <main>
-        <form action="/clip/login/" method="post">
-            {% csrf_token %}
-            {{ form }}
-            <input type="submit" value="Login">
-        </form>
-    </main>
-</body>
-</html>
+{% extends "./layout.html" %}
+{% load static %}
+
+{% block title %}Login to your account{% endblock %}
+
+{% block main %}
+<h1>Please Enter Your Username and Password</h1>
+<form action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+    <div class="full-width left">
+        <label for="{{ form.username.id_for_label }}">Username:</label><br>
+        {{ form.username }}
+    </div><br>
+    <div class="full-width left">
+        <label for="{{ form.password.id_for_label }}">Password:</label><br>
+        {{ form.password }}
+    </div><br>
+    <input type="submit" value="Login" class="button">
+</form>
+{% endblock %}
+
+{% block footernav %}
+    <div>
+        <a class="button full-width" href="{% url 'signup' %}">Sign Up</a>
+    </div>
+{% endblock %}
