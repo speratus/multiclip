@@ -19,11 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="173c4aae-78d1-4810-a491-523af261ef52" name="Default Changelist" comment="starts refactoring consumers to make clipboard to transfer on  connect">
+    <list default="true" id="173c4aae-78d1-4810-a491-523af261ef52" name="Default Changelist" comment="adds redis dependency and makes auto echo clipboard work">
+      <change afterPath="$PROJECT_DIR$/clipper/templates/clipper/layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clipper/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/clipper/consumers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clipper/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/clipper/templates/clipper/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clipper/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/clipper/templates/clipper/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clipper/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/clipper/templates/clipper/signup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +57,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/clipper/templates/clipper" />
       <recent name="$PROJECT_DIR$/clipper" />
     </key>
   </component>
@@ -231,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593486014117</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="adds redis dependency and makes auto echo clipboard work">
+      <created>1593569888426</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1593569888426</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -273,7 +282,8 @@
     <MESSAGE value="moves js into a static file." />
     <MESSAGE value="properly indents clipboard.js" />
     <MESSAGE value="fixes bugs with websocket routing. Prototype works!" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes bugs with websocket routing. Prototype works!" />
+    <MESSAGE value="adds redis dependency and makes auto echo clipboard work" />
+    <option name="LAST_COMMIT_MESSAGE" value="adds redis dependency and makes auto echo clipboard work" />
   </component>
   <component name="WindowStateProjectService">
     <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1589466584833">
@@ -312,10 +322,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="1825" height="340" key="GridCell.Tab.1.right/72.27.1848.1053@72.27.1848.1053" timestamp="1593486044220" />
-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1593486016371">
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1593569892284">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1593486016371" />
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1593569892284" />
     <state x="689" y="342" width="604" height="430" key="git4idea.merge.GitPullDialog" timestamp="1592849117337">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
