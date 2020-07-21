@@ -6,25 +6,31 @@
 
 {% block main %}
 <h1>Enter Your Account Details</h1>
+
+{{ form.non_form_errors }}
 <form action="{% url 'signup' %}" method="post">
     {% csrf_token %}
     <div class="full-width left">
+        {{ form.email.errors }}
         <label for="{{ form.email.id_for_label }}">Email:</label><br>
         {{ form.email }}
     </div><br>
     <div class="full-width left">
+        {{ form.username.errors }}
         <label for="{{ form.username.id_for_label }}">Username:</label><br>
         {{ form.username }}
     </div><br>
     <div class="full-width left">
+        {{ form.password_errors }}
         <label for="{{ form.password.id_for_label }}">Password:</label><br>
         {{ form.password }}
     </div><br>
     <div class="full-width left">
+        {{ form.confirm_password.errors }}
         <label for="{{ form.confirm_password.id_for_label }}">Confirm Password:</label><br>
         {{ form.confirm_password }}
     </div><br>
-    <input type="submit" value="Signup" class="button">
+    <input type="submit" value="Sign up" class="button">
 </form>
 {% endblock %}
 

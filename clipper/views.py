@@ -39,14 +39,14 @@ def signup(request):
         if form.is_valid():
             data = form.cleaned_data
 
-            if data['confirm_password'] == data['password']:
-                user = User.objects.create_user(data['username'], data['email'], data['password'])
-                clipbpoard_id = uuid.uuid4().hex
-                clipboard = UserClipboard(user=user, clipbpoard_id=clipbpoard_id)
-                clipboard.save()
-                return redirect(reverse('login'))
-            else:
-                pass
+            user = User.objects.create_user(data['username'], data['email'], data['password'])
+            clipboard_id = uuid.uuid4().hex
+            clipboard = UserClipboard(user=user, clipboard_id=clipboard_id)
+            clipboard.save()
+            return redirect(reverse('login'))
+        else:
+            signup_form = SignupForm()
+            return render(request, 'clipper/signup.html', {'form': form})
     else:
         signupform = SignupForm()
         return render(request, 'clipper/signup.html', {'form': signupform})

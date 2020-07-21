@@ -1,4 +1,7 @@
 from django import forms
+from django.core.validators import validate_email
+
+from .validators import validate_unique_username
 
 class LoginForm(forms.Form):
     username = forms.CharField(
@@ -31,7 +34,8 @@ class SignupForm(forms.Form):
                 'class': 'input',
                 'placeholder': 'Email'
             }
-        )
+        ),
+        validators=[validate_email]
     )
     username = forms.CharField(
         label="Username",
@@ -41,7 +45,8 @@ class SignupForm(forms.Form):
                 'class': 'input',
                 'placeholder': 'Username'
             }
-        )
+        ),
+        validators=[validate_unique_username]
     )
     password = forms.CharField(
         label="Password",
@@ -63,3 +68,12 @@ class SignupForm(forms.Form):
             }
         )
     )
+
+    def clean(self):
+        cleaned_data = super().clean()
+        password = cleaned_data.get('password')
+        confirm_password = cleaned_data.get('confirm_password')
+
+        if confirm_password != password:
+            msg = "Passwords must match!"
+            self.add_error('confirm_password', msg)
