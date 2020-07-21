@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
-from django.contrib.auth import authenticate, login as log_user_in
+from django.contrib.auth import authenticate, login as log_user_in, logout
 from django.http.response import HttpResponseRedirect
 from django.contrib.auth.models import User
 import uuid
@@ -56,3 +56,9 @@ def signup(request):
     else:
         signupform = SignupForm()
         return render(request, 'clipper/signup.html', {'form': signupform})
+
+def signout(request):
+    if request.user.is_authenticated:
+        logout(request)
+
+    return redirect(reverse('login'))
