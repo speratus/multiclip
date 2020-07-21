@@ -28,6 +28,12 @@ def login(request):
                 response = HttpResponseRedirect(reverse('main'))
                 response.set_cookie('clipboard-id', id)
                 return response
+            else:
+                login_form = LoginForm()
+                return render(request, 'clipper/login.html', {
+                        'form': login_form, 
+                        'errors': ['The username and password do not match any user!']
+                    })
     else:
         loginform = LoginForm()
         return render(request, 'clipper/login.html', {'form': loginform})

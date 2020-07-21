@@ -6,6 +6,13 @@
 
 {% block main %}
 <h1>Please Enter Your Username and Password</h1>
+{% if errors is not None %}
+    <ul class="errorlist">
+    {% for e in errors %}
+        <li>{{ e }}</li>
+    {% endfor%}
+    </ul>
+{% endif %}
 <form action="{% url 'login' %}" method="post">
     {% csrf_token %}
     <div class="full-width left">
