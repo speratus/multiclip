@@ -1,0 +1,39 @@
+{% extends 'clipper/layout.html'%}
+{% load static %}
+
+{% block title %}Welcome to the Edgeless Clipboard! {% endblock %}
+
+{% block main %}
+<h1>
+    Have you ever wanted to copy a link on your phone and paste it 
+    into a browser on your computer?
+</h1>
+<h2>
+    Only to realize that the only way to get it to your PC is to email
+    it to yourself.
+</h2><br>
+<h2>Who wants to send themselves an email that contains nothing but a link?</h2>
+<h1>I get it. I built this app for you.</h1>
+<h2>
+    Forget the days of sending yourself emails, now simply hit that copy button
+    your phone. Open up your computer and hit the paste button. DONE.
+</h2>
+<h3>
+    Copy on your phone; paste on your computer. Or the other way around.
+    Or paste on a tablet. 
+</h3><br>
+<h3>
+    Heck, why not paste wherever you want?
+    The sky's the limit.
+</h3>
+<h1>Because this is the <em>Edgeless Clipboard</em>.</h1>
+{% endblock %}
+
+{% block footernav %}
+<div>
+    <a class="button full-width" href="{% url 'login' %}">Sign in</a>
+</div>
+<div>
+    <a class="button full-width" href="{% url 'signup' %}">Sign up</a>
+</div>
+{% endblock %}
