@@ -20,9 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="173c4aae-78d1-4810-a491-523af261ef52" name="Default Changelist" comment="adapts login page for new styles">
+      <change afterPath="$PROJECT_DIR$/clipper/templates/clipper/password_change.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clipper/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/clipper/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clipper/templates/clipper/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/clipper/templates/clipper/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clipper/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/clipper/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +33,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -51,7 +52,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../experimenation/chatsockets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ai-analytics" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -59,6 +60,7 @@
       <recent name="$PROJECT_DIR$/clipper" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -306,10 +308,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="adapts login page for new styles" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1589466584833">
-      <screen x="72" y="27" width="1848" height="1053" />
+    <state x="549" y="175" key="FileChooserDialogImpl" timestamp="1599333875632">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1589466584833" />
+    <state x="549" y="175" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1599333875632" />
     <state width="1825" height="340" key="GridCell.Tab.0.bottom" timestamp="1593486044217">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -350,9 +352,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="689" y="342" width="604" height="430" key="git4idea.merge.GitPullDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1592849117337" />
-    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1593568369996">
-      <screen x="72" y="27" width="1848" height="1053" />
+    <state x="488" y="184" width="672" height="537" key="search.everywhere.popup" timestamp="1599347188000">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
+    <state x="488" y="184" width="672" height="537" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1599347188000" />
     <state x="659" y="259" width="672" height="678" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1593568369996" />
   </component>
 </project>

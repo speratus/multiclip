@@ -1,5 +1,6 @@
 from django import forms
 from django.core.validators import validate_email
+from django.contrib.auth.forms import PasswordChangeForm as PasswordChange
 
 from .validators import validate_unique_username
 
@@ -77,3 +78,38 @@ class SignupForm(forms.Form):
         if confirm_password != password:
             msg = "Passwords must match!"
             self.add_error('confirm_password', msg)
+
+
+class PasswordChangeForm(PasswordChange):
+    old_password = forms.CharField(
+        label="Old Password",
+        max_length=256,
+        widget=forms.PasswordInput(
+            attrs={
+                'class': 'input',
+                'placeholder': 'Old Password'
+            }
+        )
+    )
+
+    new_password1 = forms.CharField(
+        label='New Password',
+        max_length=256,
+        widget=forms.PasswordInput(
+            attrs={
+                'class': 'input',
+                'placeholder': 'New Password'
+            }
+        )
+    )
+
+    new_password2 = forms.CharField(
+        label="Confirm Password",
+        max_length=256,
+        widget=forms.PasswordInput(
+            attrs = {
+                'class': 'input',
+                'placeholder': 'Confirm Password'
+            }
+        )
+    )
