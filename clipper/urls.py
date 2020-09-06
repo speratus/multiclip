@@ -2,7 +2,7 @@ from django.urls import path
 from django.contrib.auth import views as auth_views
 
 from . import views
-from .forms import PasswordChangeForm
+from .forms import PasswordChangeForm, PasswordResetForm
 from django.views.generic import TemplateView
 
 urlpatterns = [
@@ -16,6 +16,10 @@ urlpatterns = [
         success_url='/clipboard/',
         form_class=PasswordChangeForm
     )),
-    path('password_change/done/', auth_views.PasswordChangeDoneView.as_view()),
+    path('reset_password/', auth_views.PasswordResetView.as_view(
+        template_name='clipper/password_reset.html',
+        success_url='/login/',
+        form_class=PasswordResetForm
+    ))
     
 ]

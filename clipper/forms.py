@@ -1,8 +1,9 @@
 from django import forms
 from django.core.validators import validate_email
-from django.contrib.auth.forms import PasswordChangeForm as PasswordChange
+from django.contrib.auth.forms import PasswordChangeForm as PasswordChange, PasswordResetForm as PasswordReset
 
 from .validators import validate_unique_username
+
 
 class LoginForm(forms.Form):
     username = forms.CharField(
@@ -25,6 +26,7 @@ class LoginForm(forms.Form):
             }
         )
     )
+
 
 class SignupForm(forms.Form):
     email = forms.CharField(
@@ -110,6 +112,19 @@ class PasswordChangeForm(PasswordChange):
             attrs = {
                 'class': 'input',
                 'placeholder': 'Confirm Password'
+            }
+        )
+    )
+
+
+class PasswordResetForm(PasswordReset):
+    email = forms.CharField(
+        label="Email",
+        max_length=256,
+        widget=forms.TextInput(
+            attrs={
+                'class': 'input',
+                'placeholder': 'Email Address'
             }
         )
     )
